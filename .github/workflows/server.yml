@@ -2,6 +2,7 @@ name: .NET Core
 
 on:
   push:
+    paths: 'adventure-game-api/*'
     branches: [ master ]
   pull_request:
     branches: [ master ]
