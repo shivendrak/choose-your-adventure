@@ -27,9 +27,11 @@ jobs:
     - name: Test
       working-directory: 'adventure-game-api'
       run: dotnet test --no-restore --verbosity normal
-    - name: Test
+    - name: build & publish
       working-directory: 'adventure-game-api'
-      run: dotnet publish -verbosity normal -o '/server'
+      run: |
+        dotnet build --configuration Release
+        dotnet publish -c Relase -o '/server' -verbosity normal 
       
       # Deploy to Azure Web apps
     - name: 'Run Azure webapp deploy action using publish profile credentials'
