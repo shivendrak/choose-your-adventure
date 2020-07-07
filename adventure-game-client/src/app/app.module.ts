@@ -5,7 +5,7 @@ import { FormsModule } from '@angular/forms';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
-import { WelcomeComponent, GameComponent, DashboardComponent, TreeViewComponent, ResultViewComponent } from './components/components';
+import { WelcomeComponent, GameComponent, DashboardComponent, TreeViewComponent, ResultViewComponent, LoadingComponent } from './components/components';
 
 @NgModule({
   declarations: [
@@ -15,6 +15,7 @@ import { WelcomeComponent, GameComponent, DashboardComponent, TreeViewComponent,
     DashboardComponent,
     TreeViewComponent,
     ResultViewComponent,
+    LoadingComponent
   ],
   imports: [
     BrowserModule,

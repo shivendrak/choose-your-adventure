@@ -2,7 +2,7 @@
     <h2> Choose your adventure </h2>
 </div>
 
-<div class="card-container">
+<div *ngIf="!isLoading; else Loading" class="card-container">
     <div *ngFor="let adventure of adventures" class="adventure-detail-card">
         <ng-container *ngTemplateOutlet="AdventureDetail; context: { adventure: adventure }">
         </ng-container>
@@ -14,4 +14,9 @@
     <div class="card" (click)="loadAdventure(adventure);">
         <span>{{adventure?.description}}</span>
     </div>
+</ng-template>
+
+
+<ng-template #Loading>
+   <loading></loading>
 </ng-template>

@@ -10,16 +10,21 @@ import { Router } from '@angular/router';
 })
 export class DashboardComponent implements OnInit {
 
+  isLoading: boolean;
   adventures: Adventure[];
 
   constructor(public dataLoadSvc: DataloaderService, public router: Router) { }
 
   ngOnInit(): void {
+    this.isLoading = true;
     this.getAdventures();
   }
 
   getAdventures(): void {
-    this.dataLoadSvc.getAdventures().subscribe(adventures => this.adventures = adventures);
+    this.dataLoadSvc.getAdventures().subscribe(adventures => {
+      this.adventures = adventures;
+      this.isLoading = false;
+    });
   }
 
   loadAdventure(adventure: Adventure): void {
