@@ -23,16 +23,18 @@ jobs:
       run: dotnet restore
     - name: Build
       working-directory: 'adventure-game-api'
-      run: dotnet build --configuration Release --no-restore
+      run: |
+        pushd .
+        dotnet build -c Release -o ./output --no-restore
+        pushd .
     - name: Test
       working-directory: 'adventure-game-api'
       run: dotnet test --no-restore --verbosity normal
     - name: build & publish
       working-directory: 'adventure-game-api'
       run: |
-        dotnet build --configuration Release
-        dotnet publish -c Release -o '/server'
-      
+        dotnet publish -c Release -o ./output
+     
       # Deploy to Azure Web apps
     - name: 'Run Azure webapp deploy action using publish profile credentials'
       uses: azure/webapps-deploy@v2
