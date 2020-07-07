@@ -1,7 +1,7 @@
 ![Adventure Game Client](https://github.com/ShivendraKu/choose-your-adventure/workflows/Adventure%20Game%20Client/badge.svg)
 ![Adventure Game API](https://github.com/ShivendraKu/choose-your-adventure/workflows/Adventure%20Game%20API/badge.svg)
 
-# Demo URL
+### Demo URL
 [Angular App](https://shivendra-cyo.azurewebsites.net/)
 
 [API Swagger](https://shivendra-cyo-api.azurewebsites.net/swagger)
@@ -25,7 +25,7 @@ This project was generated with [Angular CLI](https://github.com/angular/angular
 `npm install`
 
 The application is configured with 2 options to run with. 
-### 1. Without api
+#### 1. Without api
 With this option the UI will run standalone and the data will be served from assets folder in the source code.
 
 To run with this options hit following command. The app will be automatically launched.
@@ -36,21 +36,18 @@ If you wish to run the app on a different port use following
 
 `ng serve --port <your port number> --open`
 
-### 2. With API
+#### 2. With API
 With this option the UI will run standalone and the data will be served from assets folder in the source code.
 
 To run with this options hit following command. The app will be automatically launched.
 
 `npm start -- -c with-api`
 
-## Running unit tests
+### Running unit tests
 
 Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
 
 # Adventure Game API
 
 This project was created in .net Core 3.1
-
-## Run application
-
-Open the adventure-game-api/AdventureGame.Service.sln file in VS 2019 and hit F5 to start the api server. By default it launches the swagger url. 
+To run this project use VS 2019 and open the adventure-game-api/AdventureGame.Service.sln file. Hitting F5 would start the applicationa and lauch
