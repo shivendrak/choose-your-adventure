@@ -25,9 +25,9 @@ jobs:
         node-version: ${{ env.NODE_VERSION }}
     - name: npm install and build
       run: |
-        working-directory: 'adventure-game-api'
+        working-directory: ./adventure-game-client
         npm install
-        npm run build -- --prod
+        npm run build --prod
     - name: 'Deploy to Azure WebApp'
       uses: azure/webapps-deploy@v1
       with: 

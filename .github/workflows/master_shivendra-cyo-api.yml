@@ -5,6 +5,7 @@ name: Adventure Game API
 
 on:
   push:
+    paths: 'adventure-game-api/*'
     branches:
       - master
 
