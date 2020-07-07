@@ -1,5 +1,7 @@
 ![API Build](https://github.com/ShivendraKu/choose-your-adventure/workflows/Build%20and%20deploy%20ASP.Net%20Core%20app%20to%20Azure%20Web%20App%20-%20shivendra-cyo-api/badge.svg)
 
+![Adventure Game Client](https://github.com/ShivendraKu/choose-your-adventure/workflows/Adventure%20Game%20Client/badge.svg)
+
 # Demo URL
 [API Swagger](https://shivendra-cyo-api.azurewebsites.net/swagger)
 
