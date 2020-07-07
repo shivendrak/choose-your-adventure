@@ -25,7 +25,7 @@ namespace AdventureGame.UnitTests.Business
         }
 
         [Theory]
-        [InlineData("{\"adventures\": [{ \"name\": \"test-advenure\",\"description\": \"Test Adventure\"}]}", 1)]
+        [InlineData("{\"adventures\": [{ \"name\": \"test-adventure\",\"description\": \"Test Adventure\"}]}", 1)]
         [InlineData("{\"adventures\": []}", 0)]
         public async Task GetAdventures_ShouldReturnAllAdventures(string json, int count)
         {
@@ -49,7 +49,7 @@ namespace AdventureGame.UnitTests.Business
         [Theory]
         [InlineData("{}")]
         [InlineData("")]
-        [InlineData("{\"changed-property\": [{ \"name\": \"test-advenure\",\"description\": \"Test Adventure\"}]}")]
+        [InlineData("{\"changed-property\": [{ \"name\": \"test-adventure\",\"description\": \"Test Adventure\"}]}")]
         [InlineData("{\"adventures\": [\"test\"]}")]
         public async Task GetAdventures_ShouldThrowException_WhenInvalidData(string json)
         {
@@ -84,9 +84,9 @@ namespace AdventureGame.UnitTests.Business
         [Theory]
         [InlineData("{}")]
         [InlineData("")]
-        [InlineData("{\"changed-property\": [{ \"name\": \"test-advenure\",\"description\": \"Test Adventure\"}]}")]
+        [InlineData("{\"changed-property\": [{ \"name\": \"test-adventure\",\"description\": \"Test Adventure\"}]}")]
         [InlineData("{\"adventures\": [\"test\"]}")]
-        public async Task GetQuestionss_ShouldThrowException_WhenInvalidData(string json)
+        public async Task GetQuestions_ShouldThrowException_WhenInvalidData(string json)
         {
             fileRepository.Setup(_ => _.IsFileExist(It.IsAny<string>())).Returns(true);
             fileRepository.Setup(_ => _.ReadFile(It.IsAny<string>())).Returns(json);

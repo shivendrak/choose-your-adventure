@@ -28,9 +28,8 @@ namespace AdventuresService
             {
                 swagger.SwaggerDoc("v1", new OpenApiInfo { Title = "AdventureAPI", Version = "v1" });
             });
-            
-            services.AddMvc().SetCompatibilityVersion(CompatibilityVersion.Version_3_0)
-                .AddMvcOptions(options => options.Filters.Add<ExceptionFilter>());
+
+            services.AddMvc().SetCompatibilityVersion(CompatibilityVersion.Version_3_0);
             services.AddTransient<IAdventureService, AdventureService>();
             services.AddTransient<IFileRepository, FileRepository>();
         }
