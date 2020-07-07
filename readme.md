@@ -3,7 +3,14 @@
 
 # Demo URL
 [Angular App](https://shivendra-cyo.azurewebsites.net/)
+
 [API Swagger](https://shivendra-cyo-api.azurewebsites.net/swagger)
+
+> This repository is configured in MonoRepo fashion.
+
+> adventure-game-client : contains the angular client code. 
+
+> adventure-game-api : contains the .net core api app. 
 
 
 # Adventure Game Client
@@ -13,26 +20,28 @@ This project was generated with [Angular CLI](https://github.com/angular/angular
 ## Run application
 
 ### Open cmd and execute following command to install dependencies. 
-`adventure-game-client> npm install`
+`cd adventure-game-client`
+
+`npm install`
 
 The application is configured with 2 options to run with. 
-### Without api
+### 1. Without api
 With this option the UI will run standalone and the data will be served from assets folder in the source code.
 
 To run with this options hit following command. The app will be automatically launched.
 
-`adventure-game-client> npm start`
+`npm start`
 
 If you wish to run the app on a different port use following
 
 `ng serve --port <your port number> --open`
 
-### With API
+### 2. With API
 With this option the UI will run standalone and the data will be served from assets folder in the source code.
 
 To run with this options hit following command. The app will be automatically launched.
 
-`adventure-game-client> ng serve -c with-api --port 55500 --open`
+`ng serve -c with-api --port 55500 --open`
 
 If you wish to run the app on a different port use following
 `ng serve -c with-api --port <your port number> --open`
