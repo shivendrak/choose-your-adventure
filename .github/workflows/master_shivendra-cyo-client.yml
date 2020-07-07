@@ -5,7 +5,6 @@ name: Adventure Game Client
 
 on:
   push:
-    paths: 'adventure-game-client/*'
     branches:
       - master
 
