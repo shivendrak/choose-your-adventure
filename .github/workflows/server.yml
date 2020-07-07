@@ -5,6 +5,7 @@ on:
     paths: 'adventure-game-api/*'
     branches: [ master ]
   pull_request:
+    paths: 'adventure-game-api/*'
     branches: [ master ]
 
 jobs:
@@ -19,12 +20,16 @@ jobs:
       with:
         dotnet-version: 3.1.101
     - name: Install dependencies
+      working-directory: 'adventure-game-api'
       run: dotnet restore
     - name: Build
+      working-directory: 'adventure-game-api'
       run: dotnet build --configuration Release --no-restore
     - name: Test
+      working-directory: 'adventure-game-api'
       run: dotnet test --no-restore --verbosity normal
     - name: Test
+      working-directory: 'adventure-game-api'
       run: dotnet publish -verbosity normal -o '/server'
       
       # Deploy to Azure Web apps
