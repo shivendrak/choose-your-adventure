@@ -31,7 +31,7 @@ jobs:
       working-directory: 'adventure-game-api'
       run: |
         dotnet build --configuration Release
-        dotnet publish -c Relase -o '/server' -verbosity normal 
+        dotnet publish -c Release -o '/server'
       
       # Deploy to Azure Web apps
     - name: 'Run Azure webapp deploy action using publish profile credentials'
