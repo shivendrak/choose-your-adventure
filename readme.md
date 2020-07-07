@@ -5,12 +5,10 @@
 This repository is configured in MonoRepo fashion.
 adventure-game-client : contains the angular client code. 
 adventure-game-api : contains the .net core api app. 
-
-The frontend and backend are both hosted in a azure webapp for demo purpose. Below url can be used to access the environemnts. 
 ```
-[Angular App](https://shivendra-cyo.azurewebsites.net/)
-
-[API Swagger](https://shivendra-cyo-api.azurewebsites.net/swagger)
+The frontend and backend are both hosted in a azure webapp for demo purpose. Below url can be used to access the environemnts. 
+  1. [Angular App](https://shivendra-cyo.azurewebsites.net/) 
+  2. [API Swagger](https://shivendra-cyo-api.azurewebsites.net/swagger)
 
 # Adventure Game Client
 
@@ -50,4 +48,4 @@ Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.
 
 This project was created in .net Core 3.1.
 
-To run this project using VS 2019, open the **adventure-game-api/AdventureGame.Service.sln** file. Once the project is loaded in visual studio, hit F5 to launch the swagger url. 
+To run this project using VS 2019, open the **adventure-game-api/AdventureGame.Service.sln** file. Once the project is loaded in visual studio, hit F5 to launch the swagger URL. 
