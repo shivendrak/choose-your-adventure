@@ -27,9 +27,9 @@ jobs:
       run: dotnet publish -verbosity normal -o '/server'
       
       # Deploy to Azure Web apps
-      - name: 'Run Azure webapp deploy action using publish profile credentials'
-        uses: azure/webapps-deploy@v2
-        with: 
+    - name: 'Run Azure webapp deploy action using publish profile credentials'
+      uses: azure/webapps-deploy@v2
+      with: 
           app-name: 'shivendra-cyo-api'
           publish-profile: 'Azure_Credentials'
           package: '/server'
