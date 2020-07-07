@@ -1,6 +1,6 @@
-﻿using AdventureGame.Business.Services;
+﻿using AdventureGame.API.Utilities;
+using AdventureGame.Business.Services;
 using AdventuresService.API.Models;
-using AdventuresService.API.Utilities;
 using Microsoft.AspNetCore.Mvc;
 using System.ComponentModel.DataAnnotations;
 using System.Threading.Tasks;

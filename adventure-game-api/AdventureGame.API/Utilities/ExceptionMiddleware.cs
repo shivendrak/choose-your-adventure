@@ -4,7 +4,7 @@ using System;
 using System.Net;
 using System.Threading.Tasks;
 
-namespace AdventuresService.API.Utilities
+namespace AdventureGame.API.Utilities
 {
     public class ExceptionMiddleware
     {

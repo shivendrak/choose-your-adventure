@@ -1,7 +1,7 @@
 ﻿using System;
 using System.Net;
 
-namespace AdventuresService.API.Utilities
+namespace AdventureGame.API.Utilities
 {
     public class ApiException : Exception
     {

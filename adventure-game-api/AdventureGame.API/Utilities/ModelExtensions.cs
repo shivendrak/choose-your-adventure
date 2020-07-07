@@ -3,7 +3,7 @@ using AdventuresService.API.Models;
 using System.Collections.Generic;
 using System.Linq;
 
-namespace AdventuresService.API.Utilities
+namespace AdventureGame.API.Utilities
 {
     public static class ModelExtensions
     {

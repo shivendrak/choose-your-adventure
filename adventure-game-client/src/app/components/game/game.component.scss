@@ -7,15 +7,6 @@ $sucess-color:green;
 .game {
     align-items: center;
 
-    .question{
-        padding:30px;
-        font-size: 25px;
-    }
-
-    .finalquestion{
-        color:$sucess-color;
-    }
-
     .congrats {
         padding:20px;
         color:$sucess-color;

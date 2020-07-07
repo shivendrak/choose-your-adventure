@@ -1,7 +1,8 @@
-﻿using AdventuresService.API.Utilities;
+﻿using AdventureGame.API.Utilities;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.Filters;
 using Microsoft.Extensions.Logging;
+using System.Diagnostics.CodeAnalysis;
 
 namespace AdventureGame.API.Utilities
 {
@@ -12,6 +13,8 @@ namespace AdventureGame.API.Utilities
         {
             this.logger = logger;
         }
+
+        [ExcludeFromCodeCoverage]
         public void OnActionExecuting(ActionExecutingContext context) {
             logger.LogInformation($"Executing: {context.ActionDescriptor.DisplayName}");
         }

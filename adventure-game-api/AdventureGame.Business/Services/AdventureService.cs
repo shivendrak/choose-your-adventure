@@ -58,11 +58,12 @@ namespace AdventureGame.Business.Services
             try
             {
                 logger.LogInformation($"Transforming file data");
-                var question = JsonConvert.DeserializeObject<QuestionEntity>(allText);
+                var questions = JsonConvert.DeserializeObject<QuestionEntity>(allText);
+                if (questions == null || questions.Questions == null) throw new InvalidDataException("File content is not in correct format");
                 logger.LogInformation($"Success : Transformation of file data");
-                return await Task.FromResult(question.Questions);
+                return await Task.FromResult(questions.Questions);
             }
-            catch (JsonSerializationException ex)
+            catch (Exception ex)
             {
                 logger.LogError(ex, $"failed to transform data from file :${path}");
                 throw new InvalidDataException("provided file is not in correct format"); ;

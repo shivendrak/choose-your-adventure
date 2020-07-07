@@ -58,5 +58,40 @@ namespace AdventureGame.UnitTests.Business
             var adventureService = new AdventureService(fileRepository.Object, logger.Object);
             await Assert.ThrowsAsync<InvalidDataException>(() => adventureService.GetAdventuresAsync());
         }
+
+        [Theory]
+        [InlineData("{\"questions\": [{ \"id\": 1, \"description\": \"Am I bored?\",}]}", 1)]
+        [InlineData("{\"questions\": []}", 0)]
+        public async Task GetQuestions_ShouldReturnAllQuestion(string json, int count)
+        {
+            fileRepository.Setup(_ => _.IsFileExist(It.IsAny<string>())).Returns(true);
+            fileRepository.Setup(_ => _.ReadFile(It.IsAny<string>())).Returns(json);
+            var adventureService = new AdventureService(fileRepository.Object, logger.Object);
+            var questions = await adventureService.GetQuestionsAsync("testName");
+
+            Assert.NotNull(questions);
+            Assert.Equal(questions.Count(), count);
+        }
+
+        [Fact]
+        public async Task GetQuestions_ShouldThrowException_WhenInvalidPath()
+        {
+            fileRepository.Setup(_ => _.IsFileExist(It.IsAny<string>())).Returns(false);
+            var adventureService = new AdventureService(fileRepository.Object, logger.Object);
+            await Assert.ThrowsAsync<FileNotFoundException>(() => adventureService.GetQuestionsAsync("testName"));
+        }
+
+        [Theory]
+        [InlineData("{}")]
+        [InlineData("")]
+        [InlineData("{\"changed-property\": [{ \"name\": \"test-advenure\",\"description\": \"Test Adventure\"}]}")]
+        [InlineData("{\"adventures\": [\"test\"]}")]
+        public async Task GetQuestionss_ShouldThrowException_WhenInvalidData(string json)
+        {
+            fileRepository.Setup(_ => _.IsFileExist(It.IsAny<string>())).Returns(true);
+            fileRepository.Setup(_ => _.ReadFile(It.IsAny<string>())).Returns(json);
+            var adventureService = new AdventureService(fileRepository.Object, logger.Object);
+            await Assert.ThrowsAsync<InvalidDataException>(() => adventureService.GetQuestionsAsync("testName"));
+        }
     }
 }
