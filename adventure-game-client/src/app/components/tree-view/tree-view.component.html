@@ -10,14 +10,14 @@
     </div>
 </div>
 <ng-template #NodeCard let-node="node">
-    <fieldset class="user" [class.highlight]="node?.IsHighlight">
-        <legend class="legend" *ngIf="node?.BranchLabel">{{node.BranchLabel}}</legend>
-        <div class="name" >{{node?.Label}}</div>
+    <fieldset class="user" [class.highlight]="node?.isHighlight">
+        <legend class="legend" *ngIf="node?.branchLabel">{{node.branchLabel}}</legend>
+        <div class="name" >{{node?.label}}</div>
     </fieldset>
 </ng-template>
 <ng-template #NodeView let-node="node">
     <ul>
-        <li *ngFor="let childNode of node?.Children">
+        <li *ngFor="let childNode of node?.children">
             <ng-container *ngTemplateOutlet="NodeCard; context: { node: childNode }"></ng-container>
             <ng-container *ngTemplateOutlet="NodeView; context: { node: childNode }"></ng-container>
         </li>

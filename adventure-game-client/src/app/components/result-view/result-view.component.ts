@@ -45,7 +45,7 @@ export class ResultViewComponent implements OnInit {
       const node = this.getTreeNode(question.description, dataPoint.branchLabel, resultsMap.has(question.id));
       if (nodeMap.has(dataPoint.parent)) {
         const parent = nodeMap.get(dataPoint.parent);
-        parent.AddChild(node);
+        parent.addChild(node);
       }
 
       nodeMap.set(question.id, node);
@@ -60,9 +60,9 @@ export class ResultViewComponent implements OnInit {
 
   private getTreeNode(label: string, branchLabel: string, isHighlight: boolean): TreeNode {
     const treeNode = new TreeNode();
-    treeNode.Label = label;
-    treeNode.IsHighlight = isHighlight;
-    treeNode.BranchLabel = branchLabel;
+    treeNode.label = label;
+    treeNode.isHighlight = isHighlight;
+    treeNode.branchLabel = branchLabel;
     return treeNode;
   }
 }

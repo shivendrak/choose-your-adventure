@@ -1,14 +1,14 @@
 export class TreeNode {
-    public Children: TreeNode[];
-    public Label: string;
-    public BranchLabel: string;
-    public IsHighlight: boolean;
+    public children: TreeNode[];
+    public label: string;
+    public branchLabel: string;
+    public isHighlight: boolean;
 
-    public AddChild(node: TreeNode): void {
-        if (!this.Children) {
-            this.Children = [];
+    public addChild(node: TreeNode): void {
+        if (!this.children) {
+            this.children = [];
         }
-        this.Children.push(node);
+        this.children.push(node);
     }
 }
 
