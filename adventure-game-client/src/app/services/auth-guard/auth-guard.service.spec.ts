@@ -15,12 +15,13 @@ describe('AuthGuard', () => {
             expect(authGuard.canActivate({} as ActivatedRouteSnapshot, {} as RouterStateSnapshot)).toEqual(true);
         });
 
-        it('should return false when user is not logged in', () => {
+        it('should navigate to default route when user is not logged in', () => {
             authService = { isLoggedIn: () => false };
-            router = {};
+            router = { navigate () { } };
             authGuard = new AuthGuard(authService, router);
-
-            expect(authGuard.canActivate({} as ActivatedRouteSnapshot, {} as RouterStateSnapshot)).toEqual(false);
+            spyOn(router, 'navigate');
+            authGuard.canActivate({} as ActivatedRouteSnapshot, {} as RouterStateSnapshot);
+            expect(router.navigate).toHaveBeenCalledWith(['']);
         });
     });
 });

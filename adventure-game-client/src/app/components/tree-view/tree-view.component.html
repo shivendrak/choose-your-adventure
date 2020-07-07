@@ -10,9 +10,10 @@
     </div>
 </div>
 <ng-template #NodeCard let-node="node">
-    <div class="user" [class.highlight]="node?.IsHighlight">
+    <fieldset class="user" [class.highlight]="node?.IsHighlight">
+        <legend class="legend" *ngIf="node?.BranchLabel">{{node.BranchLabel}}</legend>
         <div class="name" >{{node?.Label}}</div>
-    </div>
+    </fieldset>
 </ng-template>
 <ng-template #NodeView let-node="node">
     <ul>
