@@ -33,6 +33,8 @@ export class ResultViewComponent implements OnInit {
     this.router.navigate(['/dashboard']);
   }
 
+  // This function translates the flat array of questions into a TreeNode.
+  // The TreeNode is a hierarchical organisation of questions and is used by TreeView component to display the org chart
   private generateQuestionTree(questions: Question[], resultsMap: Map<number, string>): TreeNode {
     const nodeMap = new Map<number, TreeNode>();
     const questionMap = new Map<number, Question>();
