@@ -62,4 +62,4 @@ This project was created in .net Core 3.1
 
 ## Run application
 
-Open the server/<<>>.sln file in VS 2019 and hit f5 to start the api server. 
+Open the adventure-game-api/AdventureGame.Service.sln file in VS 2019 and hit f5 to start the api server. By default it launches the swagger url. 
