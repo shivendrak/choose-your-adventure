@@ -6,7 +6,7 @@ This repository is configured in MonoRepo fashion.
 adventure-game-client : contains the angular client code. 
 adventure-game-api : contains the .net core api app. 
 ```
-The frontend and backend are both hosted in a azure webapp for demo purpose. Below url can be used to access the environemnts. 
+The frontend and backend are both hosted in a azure webapp for demo purpose. Below url can be used to access the environments. 
   1. [Angular App](https://shivendra-cyo.azurewebsites.net/) 
   2. [API Swagger](https://shivendra-cyo-api.azurewebsites.net/swagger)
 
@@ -33,8 +33,8 @@ If you wish to run the app on a different port use following
 
 `ng serve --port <your port number> --open`
 
-#### 2. With API
-With this option, the UI will run standalone and the data will be served from assets folder in the source code.
+#### 2. With API (requires backend to be running locally)
+To run with this configuration it requires the api project to be running. The api project is configured to run on a specific port and the respective port information is already configured in client application as well. 
 
 To run with the option hit following command. The app will be automatically launched.
 
