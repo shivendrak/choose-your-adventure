@@ -27,7 +27,7 @@ jobs:
       working-directory: ./adventure-game-client
       run: |
         npm install
-        npm run build --prod
+        npm run build -- --prod
     - name: 'Deploy to Azure WebApp'
       uses: azure/webapps-deploy@v1
       with: 

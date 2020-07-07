@@ -1,7 +1,8 @@
 ![Adventure Game Client](https://github.com/ShivendraKu/choose-your-adventure/workflows/Adventure%20Game%20Client/badge.svg)
-![Adventure Game Client](https://github.com/ShivendraKu/choose-your-adventure/workflows/Adventure%20Game%20Client/badge.svg)
+![Adventure Game API](https://github.com/ShivendraKu/choose-your-adventure/workflows/Adventure%20Game%20API/badge.svg)
 
 # Demo URL
+[Angular App](https://shivendra-cyo.azurewebsites.net/)
 [API Swagger](https://shivendra-cyo-api.azurewebsites.net/swagger)
 
 
