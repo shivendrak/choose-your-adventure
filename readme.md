@@ -1,3 +1,9 @@
+![API Build](https://github.com/ShivendraKu/choose-your-adventure/workflows/Build%20and%20deploy%20ASP.Net%20Core%20app%20to%20Azure%20Web%20App%20-%20shivendra-cyo-api/badge.svg)
+
+# Demo URL
+[API Swagger](https://shivendra-cyo-api.azurewebsites.net/swagger)
+
+
 # Adventure Game Client
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 10.0.1.
@@ -37,12 +43,11 @@ Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.
 ## Known Issues
 1. Decision tree display dropping lines from leaf nodes. 
 2. Router takes to empty page sometimes. 
-3. 
 
 
 # Adventure Game API
 
-This project was created in .net Core. 
+This project was created in .net Core 3.1
 
 ## Run application
 
