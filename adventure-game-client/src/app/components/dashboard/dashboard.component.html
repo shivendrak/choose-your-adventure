@@ -1,0 +1,17 @@
+<div class="card-container">
+    <h2> Choose your adventure </h2>
+</div>
+
+<div class="card-container">
+    <div *ngFor="let adventure of adventures" class="adventure-detail-card">
+        <ng-container *ngTemplateOutlet="AdventureDetail; context: { adventure: adventure }">
+        </ng-container>
+    </div>
+</div>
+
+<!-- This could have been a new component. Keep it like this for the sake of simplicity. -->
+<ng-template #AdventureDetail let-adventure="adventure">
+    <div class="card" (click)="loadAdventure(adventure);">
+        <span>{{adventure?.description}}</span>
+    </div>
+</ng-template>

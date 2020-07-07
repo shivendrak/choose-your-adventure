@@ -1,0 +1,86 @@
+{
+    "questions": [
+        {
+            "id": 1,
+            "description": "Do I want a doughnut?",
+            "options": [
+                {
+                    "description": "Yes",
+                    "nextStep": 2
+                },
+                {
+                    "description": "No",
+                    "nextStep": 9
+                }
+            ]
+        },
+        {
+            "id": 2,
+            "description": "Do I deserve it?",
+            "options": [
+                {
+                    "description": "Yes",
+                    "nextStep": 3
+                },
+                {
+                    "description": "No",
+                    "nextStep": 4
+                }
+            ]
+        },
+        {
+            "id": 3,
+            "description": "Are you sure?",
+            "options": [
+                {
+                    "description": "Yes",
+                    "nextStep": 5
+                },
+                {
+                    "description": "No",
+                    "nextStep": 6
+                }
+            ]
+        },
+        {
+            "id": 4,
+            "description": "Is it a good doughnut?",
+            "options": [
+                {
+                    "description": "Yes",
+                    "nextStep": 7
+                },
+                {
+                    "description": "No",
+                    "nextStep": 8
+                }
+            ]
+        },
+        {
+            "id": 5,
+            "description": "Get it",
+            "options":[]
+
+        },
+        {
+            "id": 6,
+            "description": "Do jumping jacks first",
+            "options":[]
+        },
+        {
+            "id": 7,
+            "description": "What are you waiting for? Grab it now.",
+            "options":[]
+        },
+        {
+            "id": 8,
+            "description": "Wait till you find a sinful, unforgettable doughnut",
+            "options":[]
+        },
+        {
+            "id": 9,
+            "description": "Maybe you want an apple?",
+            "options":[]
+        }
+    ]
+}

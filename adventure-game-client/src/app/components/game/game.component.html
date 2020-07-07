@@ -1,0 +1,31 @@
+<div class="game" *ngIf="!isLoading; else Loading">
+    <div class="card-container">
+        <h3>{{adventure.description}}</h3>
+    </div>
+    <div class="card-container">
+        <div class="question" [class.finalquestion]="currentQuestion?.options?.length == 0">{{currentQuestion?.description}}</div>
+    </div>
+    <div class="card-container">
+        <div class="card option" *ngFor="let option of currentQuestion?.options" (click)="gameService.setAnswer(option)">
+            {{option.description}}
+        </div>
+    </div>
+    <div>
+        <div class="congrats" *ngIf="currentQuestion?.options?.length == 0">Congratulations! You have successfully completed the adventure.</div>
+        <input *ngIf="currentQuestion?.options?.length == 0" class="btn btn--primary" type="button"
+            (click)="onStartOver()" value="Go to Dashboard" />
+        <input *ngIf="currentQuestion?.options?.length == 0" class="btn btn--primary" type="button"
+            [routerLink]="['/result',adventure.name]" value="View Decision Tree" />
+        <input *ngIf="currentQuestion?.options?.length != 0" class="btn btn--error" type="button" value="Leave game"
+            (click)="onExit()" />
+    </div>
+</div>
+
+<ng-template #Loading>
+    <div class="lds-ring">
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+    </div>
+</ng-template>

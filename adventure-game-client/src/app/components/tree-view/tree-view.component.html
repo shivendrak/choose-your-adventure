@@ -1,0 +1,24 @@
+<div class="pg-orgchart">
+    <div class="org-chart">
+        <ul>
+            <li>
+                <ng-container *ngTemplateOutlet="NodeCard; context: { node: Node }"></ng-container>
+                <ng-container *ngTemplateOutlet="NodeView; context: { node: Node }">
+                </ng-container>
+            </li>
+        </ul>
+    </div>
+</div>
+<ng-template #NodeCard let-node="node">
+    <div class="user" [class.highlight]="node?.IsHighlight">
+        <div class="name" >{{node?.Label}}</div>
+    </div>
+</ng-template>
+<ng-template #NodeView let-node="node">
+    <ul>
+        <li *ngFor="let childNode of node?.Children">
+            <ng-container *ngTemplateOutlet="NodeCard; context: { node: childNode }"></ng-container>
+            <ng-container *ngTemplateOutlet="NodeView; context: { node: childNode }"></ng-container>
+        </li>
+    </ul>
+</ng-template>

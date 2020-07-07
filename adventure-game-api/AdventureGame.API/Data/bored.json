@@ -1,0 +1,86 @@
+{
+    "questions": [
+        {
+            "id": 1,
+            "description": "Am I bored?",
+            "options": [
+                {
+                    "description": "Yes",
+                    "nextStep": 2
+                },
+                {
+                    "description": "No",
+                    "nextStep": 6
+                }
+            ]
+        },
+        {
+            "id": 2,
+            "description": "Should I watch a movie?",
+            "options": [
+                {
+                    "description": "Yes",
+                    "nextStep": 9
+                },
+                {
+                    "description": "No",
+                    "nextStep": 3
+                }
+            ]
+        },
+        {
+            "id": 3,
+            "description": "Should I go for a walk?",
+            "options": [
+                {
+                    "description": "Yes",
+                    "nextStep": 7
+                },
+                {
+                    "description": "No",
+                    "nextStep": 8
+                }
+            ]
+        },
+        {
+            "id": 4,
+            "description": "Go watch it on Amazon prime.",
+            "options": []
+        },
+        {
+            "id": 5,
+            "description": "Go watch it on Netflix.",
+            "options":[]
+
+        },
+        {
+            "id": 6,
+            "description": "Go do some study then :)",
+            "options":[]
+        },
+        {
+            "id": 7,
+            "description": "Put on your walking gear and go.",
+            "options":[]
+        },
+        {
+            "id": 8,
+            "description": "Sorry, ran out of options",
+            "options":[]
+        },
+        {
+            "id": 9,
+            "description": "What type of movie you wish to watch?",
+            "options": [
+                {
+                    "description": "Romantic",
+                    "nextStep": 4
+                },
+                {
+                    "description": "Sci-Fi",
+                    "nextStep": 5
+                }
+            ]
+        }
+    ]
+}

@@ -1,0 +1,12 @@
+{
+    "adventures": [
+        {
+            "name": "order-doughnut",
+            "description": "Order your doughnut"
+        },
+        {
+            "name": "bored",
+            "description": "I am bored"
+        }
+    ]
+}
