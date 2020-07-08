@@ -34,7 +34,7 @@ If you wish to run the app on a different port use following
 `ng serve --port <your port number> --open`
 
 #### 2. With API (requires backend to be running locally)
-To run with this configuration it requires the api project to be running. The api project is configured to run on a specific port and the respective port information is already configured in client application as well. 
+To run with this configuration it requires the api project to be running. The api project is configured to run on a port 56600 and, same port information is already configured in client application as well. This means no configuration changes are required.
 
 To run with the option hit following command. The app will be automatically launched.
 
